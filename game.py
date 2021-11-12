@@ -3,7 +3,7 @@
 import model
 import interface
 
-class Akce:
+class Action:
     """hráč může buď dát vlajku nebo odhalit pole a také ukončit hru,
        je tady i pocet bomb na kterých nejsou vlajky a počet volných vlajek"""
     def __init__(self, grafika, pole, bomb):
@@ -67,7 +67,7 @@ class Akce:
                     if self.grafika.get_znak_z_viditelneho(prvek[0],prvek[1]) == "?":
                         self.klik(prvek[0], prvek[1])
 
-class Hra:
+class Game:
     """samotné spuštění hry a nekonečná iterace pro akce 
        s možností hrát novou hru, kontrola vstupu pro akce
        změny pokud se jedná o terminál nebo advanced,
@@ -85,7 +85,7 @@ class Hra:
         while pole1 == 0:
             pole1 = self.vlast.vstup()
         grafika1 = pole1.grafika()
-        akce1 = Akce(grafika1, pole1, pole1.get_pocet_bomb())
+        akce1 = Action(grafika1, pole1, pole1.get_pocet_bomb())
         #pokud je advanced, tak je třeba propojit s akci
         grafika1.set_akce(akce1)
         grafika1.vykresli(akce1.get_pocet_vlajek())

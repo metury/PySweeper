@@ -81,7 +81,7 @@ class GrafickeRozhrani1(GrafickeRozhrani):
             """po zmáčknutí tlačítka pro start
                nové hry"""
             self.pole.destroy()
-            h0 = game.Hra()
+            h0 = game.Game()
             h0.set_grafika("A")
             h0.start()
 

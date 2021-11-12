@@ -3,7 +3,7 @@
 import game
 
 """první spuštění hry"""
-h0 = game.Hra()
+h0 = game.Game()
 st = input("Zadejte grafiku (T - terminál, A - advanced): ")
 while st != "T" and st != "A":
     st = input("T nebo A: ")
