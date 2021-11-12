@@ -1,6 +1,8 @@
+#!/usr/bin/env python3
+
 import model
 import tkinter
-import hra
+import game
 
 class GrafickeRozhrani:
     """vykreslování pole a práce s grafickou stránkou"""
@@ -79,7 +81,7 @@ class GrafickeRozhrani1(GrafickeRozhrani):
             """po zmáčknutí tlačítka pro start
                nové hry"""
             self.pole.destroy()
-            h0 = hra.Hra()
+            h0 = game.Hra()
             h0.set_grafika("A")
             h0.start()
 

@@ -1,5 +1,7 @@
+#!/usr/bin/env python3
+
 import random
-import rozhrani
+import interface
 
 class Pole:
     """zde se vytváří hrací pole a taky 
@@ -40,9 +42,9 @@ class Pole:
         """vytvoření grafického prostředí pro dané pole, vrací se objekt grafika,
            generace podle toho, jestli je terminal nebo advanced"""
         if self.terminal:
-            grafika0 = rozhrani.GrafickeRozhrani(self.vyska_pole, self.sirka_pole, self.pocet_bomb)
+            grafika0 = interface.GrafickeRozhrani(self.vyska_pole, self.sirka_pole, self.pocet_bomb)
         else:
-            grafika0 = rozhrani.GrafickeRozhrani1(self.vyska_pole, self.sirka_pole, self.pocet_bomb)
+            grafika0 = interface.GrafickeRozhrani1(self.vyska_pole, self.sirka_pole, self.pocet_bomb)
         return grafika0
     
     def pridej_bomby(self):
@@ -98,3 +100,4 @@ class Pole:
                 i+=1
             else:
                 j+=1
+

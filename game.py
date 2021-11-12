@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import model
-import rozhrani
+import interface
 
 class Akce:
     """hráč může buď dát vlajku nebo odhalit pole a také ukončit hru,
@@ -76,9 +76,9 @@ class Hra:
     def set_grafika(self, st):
         self.terminal = st
         if self.terminal == "T":
-            self.vlast = rozhrani.Vlastnosti()
+            self.vlast = interface.Vlastnosti()
         else:
-            self.vlast = rozhrani.Vlastnosti1()
+            self.vlast = interface.Vlastnosti1()
 
     def start(self):
         pole1 = self.vlast.vstup()
